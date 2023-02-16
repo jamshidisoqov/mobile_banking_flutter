@@ -47,9 +47,12 @@ class MainButton extends StatelessWidget {
   }
 }
 
+// ***  ***  ***  All app useful colors collection  ***  ***  ***
+
 const clickLightBlue = Color(0xFF00BFFE);
 const clickDarkBlue = Color(0xFF0074FE);
 const backgroundColor = Color(0xFF252429);
 const disableButtonColor = Color(0xFF35353F);
 const textFieldColor = Color(0xFF2A2A32);
 const textFieldBorderColor = Color(0xFF373741);
+const shadowColor = Color(0xFF201F25);
