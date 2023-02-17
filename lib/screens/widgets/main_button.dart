@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MainButton extends StatelessWidget {
+class MainButton extends StatelessWidget {  // *** Click ilovasida ko'p uchraydigan gradientli button uchun widget
   final String title;
   final bool enabled;
   final double? width;
@@ -25,7 +25,7 @@ class MainButton extends StatelessWidget {
         height: height,
         width: width,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(12),
           gradient: LinearGradient(
             begin: Alignment(-1, -1),
             end: Alignment(-1, 1),

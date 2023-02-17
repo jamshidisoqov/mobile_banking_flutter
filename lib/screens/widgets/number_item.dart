@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_banking_flutter/screens/widgets/main_button.dart';
 
-class NumberItem extends StatelessWidget {
+class NumberItem extends StatelessWidget {  // *** PinCode va Register qismlaridagi raqamlar uchun widget
   final String title;
   final double? height;
   final double? width;
@@ -32,7 +32,7 @@ class NumberItem extends StatelessWidget {
           decoration: backOpacity
               ? null
               : BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(12),
                   color: disableButtonColor,
                   boxShadow: const [
                     BoxShadow(
@@ -54,8 +54,8 @@ class NumberItem extends StatelessWidget {
                       backOpacity ? "" : title,
                       textAlign: TextAlign.center,
                       style: const TextStyle(
-                        fontWeight: FontWeight.w700,
-                        fontSize: 22,
+                        fontWeight: FontWeight.w900,
+                        fontSize: 26,
                         color: Colors.white,
                       ),
                     ))),
