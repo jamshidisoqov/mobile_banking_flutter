@@ -8,10 +8,11 @@ import 'package:mobile_banking_flutter/core/data/remote/request/auth/resend_veri
 import 'package:mobile_banking_flutter/core/data/remote/request/auth/update_token_request.dart';
 import 'package:mobile_banking_flutter/core/data/remote/response/auth/base_token_response.dart';
 import 'package:mobile_banking_flutter/core/data/remote/response/auth/token_response.dart';
-import 'package:mobile_banking_flutter/di/database_module.dart';
 
 class AuthApi {
-  var dio = getIt.get<Dio>();
+  Dio dio;
+
+  AuthApi(this.dio);
 
   Future<BaseResponse<TokenResponse>> registerUser(
     RegisterRequest registerRequest,
