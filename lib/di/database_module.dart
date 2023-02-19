@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:mobile_banking_flutter/core/data/remote/api/auth_api.dart';
+import 'package:mobile_banking_flutter/core/domain/repository/auth_repository.dart';
 
 final getIt = GetIt.instance;
 
@@ -19,4 +20,8 @@ void setUpDatabase() {
 
   //auth api
   getIt.registerLazySingleton<AuthApi>(() => AuthApi(getIt.get()));
+}
+
+void setUpRepositories() {
+  getIt.registerLazySingleton(() => AuthRepository(getIt.get()));
 }
