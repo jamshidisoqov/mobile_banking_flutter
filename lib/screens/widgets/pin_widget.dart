@@ -25,7 +25,6 @@ class _PinWidgetState extends State<PinWidget> {
           const Spacer(flex: 4),
           GestureDetector(
             onTap: () {
-              print("  * * * * ");
               visible = !visible;
             },
             child: Icon(
@@ -38,7 +37,7 @@ class _PinWidgetState extends State<PinWidget> {
           ListView.builder(
             itemBuilder: (context, index) {
               return Container(
-                margin: EdgeInsets.all(4),
+                margin: const EdgeInsets.all(4),
                 height: 12,
                 width: 12,
                 decoration: BoxDecoration(

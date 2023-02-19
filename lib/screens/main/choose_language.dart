@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:mobile_banking_flutter/core/extensions/navigator_extension.dart';
 import '../widgets/main_button.dart';
 
 class ChooseLanguage extends StatelessWidget {
@@ -42,6 +43,7 @@ class ChooseLanguage extends StatelessWidget {
 
   void changeLanguage(BuildContext context, String lang) {
     context.setLocale(Locale(lang));
-    Navigator.pushNamed(context, "");
+    replace(Routes.main);
+    // pop();
   }
 }
