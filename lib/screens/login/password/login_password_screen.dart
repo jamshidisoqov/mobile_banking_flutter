@@ -1,12 +1,15 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mobile_banking_flutter/screens/widgets/click_appbar.dart';
-import 'package:mobile_banking_flutter/screens/widgets/main_button.dart';
-import 'package:mobile_banking_flutter/screens/widgets/number_item.dart';
-import 'package:mobile_banking_flutter/screens/widgets/pin_widget.dart';
+import 'package:mobile_banking_flutter/screens/main/main_screen.dart';
 
-class PinCodeScreen extends StatelessWidget {
-  const PinCodeScreen({Key? key}) : super(key: key);
+import '../../widgets/click_appbar.dart';
+import '../../widgets/main_button.dart';
+import '../../widgets/number_item.dart';
+import '../../widgets/pin_widget.dart';
+
+class LoginPasswordScreen extends StatelessWidget {
+  const LoginPasswordScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,20 +23,29 @@ class PinCodeScreen extends StatelessWidget {
                 "register".tr(),
                 leadingImage: "assets/images/arrow_back.png",
               ),
+              SizedBox(
+                height: 10,
+              ),
               Text(
-                "enterPIN".tr(),
-                style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w500),
+                "CLICK-PIN kiring".tr(),
+                style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500),
                 textAlign: TextAlign.center,
               ),
+              SizedBox(height: 20),
               PinWidget(),
-              Spacer(),
+              SizedBox(height: 66),
               Expanded(
                 flex: 4,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 50.0),
                   child: GridView.builder(
                     physics: const NeverScrollableScrollPhysics(),
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 3),
                     itemBuilder: (context, index) {
                       return NumberItem(
                         index == 10 ? '0' : '${index + 1}',
@@ -47,8 +59,6 @@ class PinCodeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-
-
               Row(
                 children: [
                   Container(
@@ -81,9 +91,12 @@ class PinCodeScreen extends StatelessWidget {
                   Spacer(
                     flex: 1,
                   ),
+                  MainButton(title: "Davom etish".tr(), onPressed: () => {
+                    Navigator.push(context, MaterialPageRoute(builder:
+                        (context) =>  MainScreen())),
+                  })
                 ],
               )
-
             ],
           ),
         ),

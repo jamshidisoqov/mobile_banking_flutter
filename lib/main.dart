@@ -29,8 +29,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: const SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-        statusBarIconBrightness: Brightness.light
+          statusBarColor: Colors.transparent,
+          statusBarIconBrightness: Brightness.light
       ),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

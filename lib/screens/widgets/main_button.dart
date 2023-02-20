@@ -21,14 +21,15 @@ class MainButton extends StatelessWidget {  // *** Click ilovasida ko'p uchraydi
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        margin: const EdgeInsets.symmetric(vertical: 10),
+        padding: EdgeInsets.symmetric(horizontal: 20,vertical: 16),
+        margin: EdgeInsets.symmetric(vertical: 20,horizontal: 12),
         height: height,
         width: width,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
           gradient: LinearGradient(
-            begin: const Alignment(-1, -1),
-            end: const Alignment(-1, 1),
+            begin: Alignment(-1, -1),
+            end: Alignment(-1, 1),
             colors: enabled?[clickLightBlue, clickDarkBlue]:[disableButtonColor, disableButtonColor],
           ),
         ),
@@ -54,6 +55,6 @@ const clickDarkBlue = Color(0xFF0074FE);
 const backgroundColor = Color(0xFF252429);
 const disableButtonColor = Color(0xFF35353F);
 const textFieldColor = Color(0xFF2A2A32);
-const textFieldBorderColor = Color(0xFF373741);
+const textFieldBorderColor = Color(0xFF4E4E56);
 const itemBottomNavColor = Color(0xFFB0B6CC);
 const shadowColor = Color(0xFF201F25);
